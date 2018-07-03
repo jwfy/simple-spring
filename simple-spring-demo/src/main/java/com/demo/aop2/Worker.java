@@ -1,4 +1,4 @@
-package com.demo.aop_test;
+package com.demo.aop2;
 
 /**
  * @author junhong

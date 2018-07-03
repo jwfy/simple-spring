@@ -1,4 +1,4 @@
-package com.demo.Aop1;
+package com.demo.aop1;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -11,7 +11,7 @@ import org.aspectj.lang.annotation.*;
 @Aspect
 public class AnimalAop2 {
 
-    @Pointcut("execution(* com.demo.Aop.*.*(..)) && args(name)")
+    @Pointcut("execution(* com.demo.aop.*.*(..)) && args(name)")
     public void pointCut(String name){}
 
     @Around("pointCut(name)")
@@ -32,7 +32,7 @@ public class AnimalAop2 {
         System.out.println(name + " animal before 2");
     }
 
-    @After("execution(* com.demo.Aop.*.*(..))")
+    @After("execution(* com.demo.aop.*.*(..))")
     public void after(){
         System.out.println("animal after 2");
     }

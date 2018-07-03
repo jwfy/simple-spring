@@ -12,8 +12,10 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 
-import com.demo.Aop.Animal;
-import com.demo.aop_test.Worker;
+import com.demo.aop.Animal;
+import com.demo.BppBean.Teacher;
+import com.demo.aop2.Worker;
+import com.demo.BppBean.SuperStudent;
 
 /**
  * Created by junhong on 18/1/7.
@@ -130,6 +132,23 @@ public class Bootstrap {
 
     }
 
+    public static void runBPP() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+                new String[]{"context-bpp.xml"});
+
+        SuperStudent student = (SuperStudent) applicationContext.getBean("superStudent");
+
+        Teacher teacher = (Teacher) applicationContext.getBean("teacher");
+
+        System.out.println(teacher.toString());
+
+        System.out.println(student.toString());
+
+        student.doSet();
+
+        System.out.println(teacher.toString());
+    }
+
 
     public static void main(String[] args){
         //runFilePathTest();
@@ -139,6 +158,7 @@ public class Bootstrap {
         //runPropertiesTest(); // classpath
         //runLogger();
         //runEventTest();
-        runAop();
+        //runAop();
+        runBPP();
     }
 }

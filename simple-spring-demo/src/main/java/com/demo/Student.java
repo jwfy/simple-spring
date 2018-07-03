@@ -17,6 +17,7 @@ public class Student {
     public Student(String name, int age) {
         this.name = name;
         this.age = age;
+        System.out.println("constructor with par loading " + this.toString());
     }
 
     public Student() {

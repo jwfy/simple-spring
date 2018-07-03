@@ -39,6 +39,9 @@ public class StudentController {
     private PeoplePropertiesPrefix peoplePropertiesPrefix;
 
     @Resource
+    private ProductPropertiesPrefix productPropertiesPrefix;
+
+    @Resource
     private SpringApplicationContextAware springApplicationContextAware;
 
     @Value("${people}")
@@ -116,6 +119,16 @@ public class StudentController {
         map.put("name", peoplePropertiesPrefix.getName());
         map.put("age", peoplePropertiesPrefix.getAge());
         map.put("all", people);
+
+        return JSON.toJSONString(map);
+    }
+
+    @GetMapping("/indexp2")
+    @ResponseBody
+    public String indexp2() {
+        // 非常基础的get请求
+        Map<String, String> map = productPropertiesPrefix.getMap();
+        //map.put("hehe", productPropertiesPrefix.getHehe());
 
         return JSON.toJSONString(map);
     }

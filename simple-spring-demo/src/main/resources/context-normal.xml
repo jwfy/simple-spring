@@ -9,7 +9,7 @@
 
     <context:annotation-config />
 
-    <context:component-scan base-package="com.demo.Aop" />
+    <context:component-scan base-package="com.demo.aop" />
 
     <!--<bean name="student" class="com.demo.Student" init-method="init">-->
         <!--<constructor-arg index="0" value="lisi" />-->
@@ -18,7 +18,7 @@
 
 
 
-    <bean class="com.demo.Aop.AnimalImpl" id="animal" />
+    <bean class="com.demo.aop.AnimalImpl" id="animal" />
     <!--<bean class="com.demo.Aop.AnimalAop" id="animalAop" />-->
     <!--<bean class="com.demo.Aop1.AnimalAop2" id="animalAop2" />-->
 

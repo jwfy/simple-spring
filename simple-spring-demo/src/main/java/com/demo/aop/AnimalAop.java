@@ -1,4 +1,4 @@
-package com.demo.Aop;
+package com.demo.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -38,7 +38,7 @@ public class AnimalAop {
     //    System.out.println("animal after");
     //}
 
-    @Before("execution(* com.demo.Aop.AnimalImpl.*(..))")
+    @Before("execution(* com.demo.aop.AnimalImpl.*(..))")
     public void before(JoinPoint joinPoint){
         Object[] args = joinPoint.getArgs();
         for(int i =0; i< args.length; i++){
@@ -47,7 +47,7 @@ public class AnimalAop {
         System.out.println("before end...");
     }
 
-    @Before("execution(* com.demo.Aop.*.*(..))")
+    @Before("execution(* com.demo.aop.*.*(..))")
     public void before1(){
         System.out.println("before1 end...");
     }

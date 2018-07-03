@@ -1,24 +1,27 @@
-package com.demo.BeanPostProcessor;
+package com.demo.bpp;
 
-import com.demo.Student;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+
+import com.demo.Student;
 
 /**
  * Created by junhong on 18/1/17.
  */
+
+//@Component
 public class CustomBeanPostProcessor implements BeanPostProcessor {
 
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         if(bean instanceof Student){
-            System.out.println("postProcessBeforeInitialization bean : " + beanName);
+            System.out.println("postProcessBeforeInitialization bean : " + beanName + " beanClass" + bean.toString());
         }
         return bean;
     }
 
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         if(bean instanceof Student){
-            System.out.println("postProcessAfterInitialization bean : " + beanName);
+            System.out.println("postProcessAfterInitialization bean : " + beanName + " beanClass" + bean.toString());
         }
         return bean;
     }

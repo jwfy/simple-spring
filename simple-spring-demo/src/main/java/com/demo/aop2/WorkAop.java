@@ -1,4 +1,4 @@
-package com.demo.aop_test;
+package com.demo.aop2;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -18,10 +18,10 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class WorkAop {
 
-    @Pointcut("execution(* com.demo.aop_test.*.*())")
+    @Pointcut("execution(* com.demo.aop2.*.*())")
     public void pointCutNoParament(){}
 
-    @Pointcut("execution(* com.demo.aop_test.*.*(String))")
+    @Pointcut("execution(* com.demo.aop2.*.*(String))")
     public void pointCutWithParament(){}
 
     //@Before("pointCutNoParament()")

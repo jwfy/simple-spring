@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.BppBean;
 
 import org.springframework.stereotype.Component;
 
@@ -6,13 +6,14 @@ import org.springframework.stereotype.Component;
  * Created by junhong on 18/1/21.
  */
 
-@Component("teacher")
+@Component
 public class Teacher {
 
     private String name;
     private int age;
 
     public Teacher() {
+        this.age = 20;
         System.out.println("this is a teacher");
     }
 
@@ -34,7 +35,7 @@ public class Teacher {
 
     @Override
     public String toString() {
-        return "com.demo.Teacher{" +
+        return "com.demo.bean.Teacher{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';

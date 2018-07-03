@@ -35,6 +35,11 @@ public class BeanIoc {
         return new PeoplePropertiesPrefix();
     }
 
+    @Bean
+    public ProductPropertiesPrefix productPropertiesPrefix() {
+        return new ProductPropertiesPrefix();
+    }
+
     @Bean("student")
     public StudentServiceWithCustomConstruct studentServiceWithCustomConstruct() {
         return new StudentServiceWithCustomConstruct("custom");
