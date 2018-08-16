@@ -18,7 +18,7 @@
 
 
 
-    <bean class="com.demo.aop.AnimalImpl" id="animal" />
+    <bean class="com.demo.bpp.aop.AnimalImpl" id="animal" />
     <!--<bean class="com.demo.Aop.AnimalAop" id="animalAop" />-->
     <!--<bean class="com.demo.Aop1.AnimalAop2" id="animalAop2" />-->
 

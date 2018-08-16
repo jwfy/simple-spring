@@ -21,6 +21,8 @@
         <module>simple-spring-dubbo-product</module>
         <module>simple-spring-dubbo-consumer</module>
         <module>simple-springboot</module>
+        <module>simple-retrofit-demo</module>
+        <module>bpp-learn</module>
     </modules>
 
     <dependencies>

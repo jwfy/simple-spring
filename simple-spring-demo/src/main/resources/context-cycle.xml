@@ -8,16 +8,15 @@
 
     <context:annotation-config />
 
-    <context:component-scan base-package="com.demo.BppBean, com.demo.bpp" />
+    <context:component-scan base-package="com.demo.cycle" />
 
-    <!--<bean name="student" class="com.demo.Student" init-method="init">-->
-        <!--<constructor-arg index="0" value="lisi" />-->
-        <!--<constructor-arg index="1" value="18" />-->
-    <!--</bean>-->
+    <bean name="service3" class="com.demo.bpp.cycle.Service3">
+        <constructor-arg index="0" ref="s1" />
+    </bean>
 
-    <!--<bean class="com.demo.BppBean.Teacher" name="teacher" />-->
-
-    <bean name="superStudent" class="com.demo.bpp.BppBean.SuperStudent" init-method="doInit" />
+    <bean name="service4" class="com.demo.bpp.cycle.Service4">
+        <property name="service1" ref="s1" />
+    </bean>
 
 
 

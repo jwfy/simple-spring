@@ -3,8 +3,6 @@ package com.demo.bpp;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
-import com.demo.Student;
-
 /**
  * Created by junhong on 18/1/17.
  */

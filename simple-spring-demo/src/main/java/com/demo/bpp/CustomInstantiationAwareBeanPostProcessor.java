@@ -7,8 +7,7 @@ import org.springframework.beans.PropertyValues;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import org.springframework.stereotype.Component;
 
-import com.demo.BppBean.SuperStudent;
-import com.demo.Student;
+import com.demo.bpp.BppBean.SuperStudent;
 
 /**
  * Created by junhong on 18/1/20.

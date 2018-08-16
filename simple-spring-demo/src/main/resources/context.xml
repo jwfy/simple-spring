@@ -8,7 +8,7 @@
 
     <context:property-placeholder location="pro.properties" />
 
-    <bean name="studentFactory" class="com.demo.StudentFactoryBean" />
+    <bean name="studentFactory" class="com.demo.bpp.StudentFactoryBean" />
 
     <!--<bean name="student" class="com.demo.Student" init-method="init">-->
         <!--<constructor-arg index="0" value="zhangsan" />-->
